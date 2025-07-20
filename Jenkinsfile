@@ -23,12 +23,27 @@ pipeline
 				bat 'mvn clean'
 			}
 		}
+		
+		stage('Test Stage')
+		{
+			steps
+			{
+				bat 'mvn test'
+			}
+		}
 				
 		stage('Build Stage')
 		{
 			steps
 			{
 				bat 'mvn install'
+			}
+		}
+		stage('Build Success')
+		{
+			steps
+			{
+				echo 'Build successful'
 			}
 		}
 		
