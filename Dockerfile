@@ -1,2 +1,2 @@
-FROM openjdk:11.0
+FROM openjdk
 COPY target/gfg-calc.jar gfg-calc.jar
